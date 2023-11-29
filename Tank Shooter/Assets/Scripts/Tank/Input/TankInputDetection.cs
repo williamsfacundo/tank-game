@@ -4,47 +4,47 @@ namespace TankGame.Tank.Input
 {
     public class TankInputDetection : MonoBehaviour
     {
-        [SerializeField] private string moveHorizontallyInputAxis;
+        [SerializeField] private string moveInputAxis;
 
-        [SerializeField] private string moveVerticallyInputAxis;
+        [SerializeField] private string rotateInputAxis;
 
-        [SerializeField] private string shootInputAxis;      
+        [SerializeField] private string shootInputAxis;     
 
-        private float moveHorizontallyAxisValue;
+        private float moveAxisValue;
 
-        private float moveVerticallyAxisValue;
+        private float rotateAxisValue;
 
         private float shootAxisValue;
 
-        public float MoveHorizontallyAxisValue 
-        {
-            get           
-            {
-                return moveHorizontallyAxisValue;
-            }
-        }
-
-        public float MoveVerticallyAxisValue 
+        public float MoveAxisValue
         {
             get 
             {
-                return moveVerticallyAxisValue;
+                return moveAxisValue;
+            }
+        }
+
+        public float RotateAxisValue 
+        {
+            get 
+            {
+                return rotateAxisValue;
             }
         }
 
         public float ShootAxisValue 
         {
             get 
-            { 
+            {
                 return shootAxisValue;
             }
         }
 
         private void Update()
         {
-            moveHorizontallyAxisValue = UnityEngine.Input.GetAxisRaw(moveHorizontallyInputAxis);            
+            moveAxisValue = UnityEngine.Input.GetAxisRaw(moveInputAxis);            
 
-            moveVerticallyAxisValue = UnityEngine.Input.GetAxisRaw(moveVerticallyInputAxis);            
+            rotateAxisValue = UnityEngine.Input.GetAxisRaw(rotateInputAxis);            
 
             shootAxisValue = UnityEngine.Input.GetAxisRaw(shootInputAxis);            
         }
