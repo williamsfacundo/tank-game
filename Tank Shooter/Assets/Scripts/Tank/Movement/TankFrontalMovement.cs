@@ -7,9 +7,9 @@ namespace TankGame.Tank.Movement
     [RequireComponent(typeof(Rigidbody), typeof(TankInputDetection))]
     public class TankFrontalMovement : MonoBehaviour
     {
-        [SerializeField] [Range(10f, 100.0f)] private float acceleration;
+        [SerializeField] [Range(10f, 100.0f)] private float moveAcceleration;
 
-        [SerializeField] [Range(1.0f, 50.0f)] private float maxAcceleration;
+        [SerializeField] [Range(1.0f, 50.0f)] private float maxMoveAcceleration;
 
         private Rigidbody rigidBody;
 
@@ -34,9 +34,9 @@ namespace TankGame.Tank.Movement
 
         private void AccelerateTank() 
         {
-            if (rigidBody.velocity.magnitude < maxAcceleration) 
+            if (rigidBody.velocity.magnitude < maxMoveAcceleration) 
             {
-                rigidBody.velocity += transform.forward * acceleration * Time.deltaTime * inputDetection.MoveAxisValue;
+                rigidBody.velocity += transform.forward * moveAcceleration * Time.deltaTime * inputDetection.MoveAxisValue;
             }
         }
     }
