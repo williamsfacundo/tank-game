@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc3cd92e913108419ea4f70aa5ae73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAcceleration: 16
+  moveAcceleration: 20
   maxMoveAcceleration: 30
 --- !u!114 &-8207211559980653446
 MonoBehaviour:
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0bfc46c7cdc726499552a4e4bfc59f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAcceleration: 60
+  rotationAcceleration: 80
 --- !u!1 &8940084128574988355
 GameObject:
   m_ObjectHideFlags: 0
