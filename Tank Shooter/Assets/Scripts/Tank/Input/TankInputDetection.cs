@@ -1,4 +1,8 @@
+using System;
+
 using UnityEngine;
+
+using TankGame.Enumerators;
 
 namespace TankGame.Tank.Input
 {
@@ -8,13 +12,13 @@ namespace TankGame.Tank.Input
 
         [SerializeField] private string rotateInputAxis;
 
-        [SerializeField] private string shootInputAxis;     
+        [SerializeField] private MouseButtonEnum shootInputButton;     
 
         private float moveAxisValue;
 
         private float rotateAxisValue;
 
-        private float shootAxisValue;
+        public event Action onShootClicked;
 
         public float MoveAxisValue
         {
@@ -30,23 +34,18 @@ namespace TankGame.Tank.Input
             {
                 return rotateAxisValue;
             }
-        }
-
-        public float ShootAxisValue 
-        {
-            get 
-            {
-                return shootAxisValue;
-            }
-        }
+        }        
 
         private void Update()
         {
             moveAxisValue = UnityEngine.Input.GetAxisRaw(moveInputAxis);            
 
-            rotateAxisValue = UnityEngine.Input.GetAxisRaw(rotateInputAxis);            
+            rotateAxisValue = UnityEngine.Input.GetAxisRaw(rotateInputAxis);
 
-            shootAxisValue = UnityEngine.Input.GetAxisRaw(shootInputAxis);            
+            if (UnityEngine.Input.GetMouseButton((int)shootInputButton))
+            {
+                onShootClicked?.Invoke();
+            }            
         }
     }
 }
