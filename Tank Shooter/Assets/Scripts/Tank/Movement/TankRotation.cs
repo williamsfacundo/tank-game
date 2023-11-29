@@ -34,7 +34,7 @@ namespace TankGame.Tank.Movement
 
         private void RotateTank()
         {
-            rigidBody.angularVelocity = auxRotationVector * Time.deltaTime * inputDetection.RotateAxisValue;            
+            rigidBody.angularVelocity = auxRotationVector * UnityEngine.Time.deltaTime * inputDetection.RotateAxisValue;            
         }
     }
 }
