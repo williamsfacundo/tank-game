@@ -291,8 +291,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7077039665738558029}
-  - component: {fileID: 7183326340957037535}
   - component: {fileID: 4093985961162901462}
+  - component: {fileID: 7183326340957037535}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Player
@@ -318,21 +318,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7183326340957037535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7873139583744683457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75fea0a613daf1744a76b60bb5b05cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveHorizontallyInputAxis: Horizontal
-  moveVerticallyInputAxis: Vertical
-  shootInputAxis: Fire1
 --- !u!54 &4093985961162901462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -349,6 +334,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 3
+--- !u!114 &7183326340957037535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873139583744683457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fea0a613daf1744a76b60bb5b05cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveHorizontallyInputAxis: Horizontal
+  moveVerticallyInputAxis: Vertical
+  shootInputAxis: Fire1
 --- !u!1 &8940084128574988355
 GameObject:
   m_ObjectHideFlags: 0
