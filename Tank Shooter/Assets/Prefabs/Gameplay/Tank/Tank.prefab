@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 8268660436896661684}
   - component: {fileID: 8271291978130708022}
   - component: {fileID: 7872738392156332071}
+  - component: {fileID: 3778919797057273319}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -282,6 +283,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3778919797057273319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552020988445378869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbf644471fdaf14b82771a87ca02060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedDecelerator: 10
 --- !u!1 &7873139583744683457
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +311,7 @@ GameObject:
   - component: {fileID: -8207211559980653446}
   - component: {fileID: 8019975673147030645}
   - component: {fileID: 7952890986084648726}
+  - component: {fileID: 1604040921537238978}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Player
@@ -394,6 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2724796612487129863, guid: af366b500bc0a204a8e38cd7f0f904a4,
     type: 3}
+  canyonTipTransform: {fileID: 3191534902560914113}
   poolSize: 5
 --- !u!114 &7952890986084648726
 MonoBehaviour:
@@ -407,8 +423,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619de5e8c50ac204080b8fbeedeb2062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canyonTipTransform: {fileID: 3191534902560914113}
   inBetweenShotsCoolDown: 2
+--- !u!114 &1604040921537238978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873139583744683457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618dbc751fe6e9f4eb7b4eb04fce0a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSystem: {fileID: 3778919797057273319}
 --- !u!1 &8940084128574988355
 GameObject:
   m_ObjectHideFlags: 0
