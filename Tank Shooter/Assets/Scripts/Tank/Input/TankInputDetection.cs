@@ -18,7 +18,7 @@ namespace TankGame.Tank.Input
 
         private float rotateAxisValue;
 
-        public event Action onShootClicked;
+        public event Action OnShootClicked;
 
         public float MoveAxisValue
         {
@@ -44,7 +44,7 @@ namespace TankGame.Tank.Input
 
             if (UnityEngine.Input.GetMouseButton((int)shootInputButton))
             {
-                onShootClicked?.Invoke();
+                OnShootClicked?.Invoke();
             }            
         }
     }
