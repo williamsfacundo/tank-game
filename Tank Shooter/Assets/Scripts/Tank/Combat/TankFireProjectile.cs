@@ -1,42 +1,31 @@
 using UnityEngine;
 
-using TankGame.Tank.Input;
 using TankGame.Time;
 
 namespace TankGame.Tank.Combat 
 {
-    [RequireComponent(typeof(ProjectilesPool), typeof(TankInputDetection))]
+    [RequireComponent(typeof(ProjectilesPool))]
     public class TankFireProjectile : MonoBehaviour
     {
-        [SerializeField] private Transform canyonTipTransform;
-
         [SerializeField] [Range(0.1f, 10.0f)] private float inBetweenShotsCoolDown;
 
-        private ProjectilesPool projectilesPool;
-
-        private TankInputDetection inputDetection;
+        private ProjectilesPool projectilesPool;        
 
         private Timer coolDownTimer;
 
-        private bool wasProjectileFired;
+        public Timer CoolDownTimer 
+        {
+            get 
+            { 
+                return coolDownTimer;
+            }
+        }
 
         private void Awake()
         {
-            if (canyonTipTransform == null) 
-            {
-                Debug.LogError("Canyon tip transform was not assigned!");
-            }
-
-            projectilesPool = GetComponent<ProjectilesPool>();
-
-            inputDetection = GetComponent<TankInputDetection>();
+            projectilesPool = GetComponent<ProjectilesPool>();                       
 
             coolDownTimer = new Timer(inBetweenShotsCoolDown, true, true);
-        }
-
-        private void Start()
-        {
-            inputDetection.onShootClicked += FireProjectile;
         }
 
         private void Update()
@@ -44,22 +33,11 @@ namespace TankGame.Tank.Combat
             coolDownTimer.UpdateTimer();
         }
 
-        private void OnDestroy()
+        public void FireProjectile() 
         {
-            inputDetection.onShootClicked -= FireProjectile;
-        }
+            projectilesPool.ActivateProjectile();
 
-        private void FireProjectile() 
-        {
-            if (!coolDownTimer.IsRunning)
-            {
-                wasProjectileFired = projectilesPool.ActivateProjectile(canyonTipTransform);
-
-                if (wasProjectileFired) 
-                {
-                    coolDownTimer.ResetTime();
-                }
-            }
+            coolDownTimer.ResetTime();
         }
     }
 }
