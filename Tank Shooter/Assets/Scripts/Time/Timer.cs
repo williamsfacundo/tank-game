@@ -8,42 +8,28 @@ namespace TankGame.Time
 
         private float timerDuration;
 
-        private float time;
+        private float currentTime;
 
-        private bool isRunning;
+        private bool decreaseTime;
 
         public float CurrentTime
         {
             get
             {
-                return time;
+                return currentTime;
             }
         }
 
-        public bool IsRunning
+        public bool DecreaseTime
         {
             set
             {
-                isRunning = value;
+                decreaseTime = value;
             }
             get
             {
-                return isRunning;
+                return decreaseTime;
             }
-        }
-
-        public Timer(float timerDuration, bool isRunning)
-        {
-            TimerDuration = timerDuration;
-
-            this.isRunning = isRunning;
-        }
-
-        public Timer(float timerDuration)
-        {
-            TimerDuration = timerDuration;
-
-            isRunning = true;
         }
 
         public float TimerDuration
@@ -52,7 +38,9 @@ namespace TankGame.Time
             {
                 timerDuration = value;
 
-                time = timerDuration;
+                currentTime = timerDuration;
+
+                decreaseTime = false;
             }
             get
             {
@@ -60,54 +48,48 @@ namespace TankGame.Time
             }
         }
 
+        public bool IsRunning
+        {
+            get 
+            {
+                return currentTime > 0.0f;
+            }
+        }
+
+        public Timer(float timerDuration, bool decreaseTime, bool startFinished)
+        {
+            this.timerDuration = timerDuration;
+
+            this.decreaseTime = decreaseTime;
+
+            if (startFinished)
+            {
+                currentTime = 0.0f;
+            }
+            else 
+            {
+                currentTime = timerDuration;
+            }
+        }        
+
         public void UpdateTimer()
         {
-            if (time > 0.0f && isRunning)
+            if (currentTime > 0.0f && decreaseTime)
             {
-                time -= UnityEngine.Time.deltaTime;
+                currentTime -= UnityEngine.Time.deltaTime;
 
-                if (time <= 0.0f)
+                if (currentTime <= 0.0f)
                 {
+                    currentTime = 0.0f;
+
                     OnTimerEnds?.Invoke();
                 }
             }
         }
 
-        public void UpdateTimerWithReset()
+        public void ResetTime() 
         {
-            if (time > 0.0f && isRunning)
-            {
-                time -= UnityEngine.Time.deltaTime;
-
-                if (time <= 0.0f)
-                {
-                    OnTimerEnds?.Invoke();
-
-                    ResetTimer();
-                }
-            }
-        }
-
-        public void UpdateTimerWithResetAndStop()
-        {
-            if (time > 0.0f && isRunning)
-            {
-                time -= UnityEngine.Time.deltaTime;
-
-                if (time <= 0.0f)
-                {
-                    OnTimerEnds?.Invoke();
-
-                    ResetTimer();
-
-                    isRunning = false;
-                }
-            }
-        }
-
-        public void ResetTimer()
-        {
-            time = timerDuration;
+            currentTime = timerDuration;
         }
     }
 }
