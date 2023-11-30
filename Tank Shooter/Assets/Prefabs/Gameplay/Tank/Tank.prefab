@@ -295,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbbf644471fdaf14b82771a87ca02060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedDecelerator: 10
 --- !u!1 &7873139583744683457
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,9 +311,10 @@ GameObject:
   - component: {fileID: 8019975673147030645}
   - component: {fileID: 7952890986084648726}
   - component: {fileID: 1604040921537238978}
+  - component: {fileID: -1278135760169916846}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,6 +437,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSystem: {fileID: 3778919797057273319}
+--- !u!114 &-1278135760169916846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873139583744683457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043e2c3fe67d40045aea1f961705b9be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &8940084128574988355
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +464,7 @@ GameObject:
   - component: {fileID: 3050772237496858381}
   m_Layer: 0
   m_Name: Chassis
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
