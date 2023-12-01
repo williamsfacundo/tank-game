@@ -33,6 +33,11 @@ namespace TankGame.Projectile
             lifeTimeTimer.UpdateTimer();
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            Deactivate();
+        }
+
         private void OnDestroy()
         {
             lifeTimeTimer.OnTimerEnds -= Deactivate;
