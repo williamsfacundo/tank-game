@@ -131,6 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd2be8fe6ad41348854102c3af4cc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObjectName: Tank
+  targetObjectName: Combat Tank
   cameraDistanceOffset: {x: 0, y: 10, z: -12}
   cameraRotation: {x: 40, y: 0, z: 0}
