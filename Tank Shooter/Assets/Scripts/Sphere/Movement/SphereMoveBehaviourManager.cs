@@ -3,10 +3,11 @@ using UnityEngine;
 using TankGame.ScriptableObjects;
 using TankGame.Sphere.Movement;
 
+
 namespace TankGame.Sphere 
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class SphereCore : MonoBehaviour
+    public class SphereMoveBehaviourManager : MonoBehaviour
     {
         private const int SphereMoveBehavioursCount = 2;
 
@@ -14,7 +15,7 @@ namespace TankGame.Sphere
 
         [SerializeField] private Transform sphereBottomTransform;
 
-        private ISphereMoveBehaviour sphereMoveBehaviour;
+        private ISphereMoveBehaviour sphereMoveBehaviour;        
 
         private void Awake()
         {  
@@ -24,7 +25,7 @@ namespace TankGame.Sphere
         private void FixedUpdate()
         {
             sphereMoveBehaviour.MoveBehaviour();
-        }
+        }        
 
         private ISphereMoveBehaviour ReturnRandomMoveBehaviour() 
         {
