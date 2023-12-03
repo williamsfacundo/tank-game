@@ -10,6 +10,8 @@ public class SphereHealth : MonoBehaviour, IDamaged
 
     public static event Action OnActiveSphereInstancesChanged;
 
+    public static event Action OnAllSpheresDisabled;
+
     private static int activeSphereInstances = 0;
     
     public static int ActiveSphereInstances
@@ -37,6 +39,11 @@ public class SphereHealth : MonoBehaviour, IDamaged
         activeSphereInstances--;
 
         OnActiveSphereInstancesChanged.Invoke();
+
+        if (activeSphereInstances <= 0) 
+        {
+            OnAllSpheresDisabled?.Invoke();
+        }
     }
 
     public void DamageReceived()
