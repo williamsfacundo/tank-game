@@ -8,7 +8,7 @@ namespace TankGame.Sphere.Movement
 
         private Transform targetTransform;
         
-        private float sphereMoveSpeed;        
+        private float sphereMoveSpeed;
 
         public SphereMoveTowardsObject(Rigidbody sphereRigidBody, Transform targetTransform, float sphereMoveSpeed)
         {
@@ -16,7 +16,7 @@ namespace TankGame.Sphere.Movement
 
             this.targetTransform = targetTransform;
 
-            this.sphereMoveSpeed = sphereMoveSpeed;           
+            this.sphereMoveSpeed = sphereMoveSpeed;         
         }
 
         public void MoveBehaviour()
