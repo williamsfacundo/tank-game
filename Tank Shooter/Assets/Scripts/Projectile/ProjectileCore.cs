@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using TankGame.Time;
+using TankGame.Interfaces;
 
 namespace TankGame.Projectile
 {
@@ -36,6 +37,13 @@ namespace TankGame.Projectile
         private void OnCollisionEnter(Collision collision)
         {
             Deactivate();
+
+            IDamaged damagedObject = collision.gameObject.GetComponent<IDamaged>();
+            
+            if (damagedObject != null)
+            {
+                damagedObject.DamageReceived();
+            }
         }
 
         private void OnDestroy()
