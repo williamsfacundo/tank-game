@@ -16,7 +16,12 @@ public class SphereHealth : MonoBehaviour, IDamaged
         {
             return activeSphereInstances;
         }
-    }    
+    }
+
+    private void Start()
+    {
+        gameObject.SetActive(true);
+    }
 
     private void OnEnable()
     {
