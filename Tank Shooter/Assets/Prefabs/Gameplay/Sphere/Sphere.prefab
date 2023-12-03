@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 636388583593465295}
   - component: {fileID: 636388583593465294}
   - component: {fileID: 636388583593465265}
-  - component: {fileID: 8785305477532824535}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -115,17 +114,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8785305477532824535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636388583593465264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615bdd3db6166c1499622d136f27bf8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  targetName: Combat Tank
