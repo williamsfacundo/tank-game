@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6484189388117799576}
   - component: {fileID: 6484189388117799579}
   - component: {fileID: 5696786914307872915}
+  - component: {fileID: 6808191192008720191}
   m_Layer: 0
   m_Name: Gameplay Manager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,3 +59,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameDuration: 120
+--- !u!114 &6808191192008720191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484189388117799577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce4b6c56dee0dd4eb47ccd4f23eb867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseGameKeys: 700000001b000000
+  pauseMenuUI: {fileID: 0}
+  gameplayUI: {fileID: 0}
