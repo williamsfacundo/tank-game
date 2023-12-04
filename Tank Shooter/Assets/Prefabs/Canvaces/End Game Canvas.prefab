@@ -1323,6 +1323,7 @@ GameObject:
   - component: {fileID: 7139819805708760838}
   - component: {fileID: 7139819805708760837}
   - component: {fileID: 7139819805708760836}
+  - component: {fileID: 5665444169238406569}
   m_Layer: 5
   m_Name: End Game Canvas
   m_TagString: Untagged
@@ -1416,6 +1417,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5665444169238406569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139819805708760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9dc953ec12e01244b304801930de7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuButton: {fileID: 8098902830701064147}
 --- !u!1 &7139819805732062304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +1958,7 @@ PrefabInstance:
     - target: {fileID: 1400805843886369417, guid: adf784d8a86f63c4685a6fe1cbd6c874,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: Main Menu Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf784d8a86f63c4685a6fe1cbd6c874, type: 3}
@@ -1954,6 +1968,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7139819804683453784}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8098902830701064147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1400805843886369419, guid: adf784d8a86f63c4685a6fe1cbd6c874,
+    type: 3}
+  m_PrefabInstance: {fileID: 7139819804683453784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7139819805425267443
 PrefabInstance:
   m_ObjectHideFlags: 0
