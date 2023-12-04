@@ -8,9 +8,19 @@ namespace TankGame.Tank.Score
     {
         [SerializeField] [Range(1, 10000)] private int pointsPerObjectiveDestroyed;
 
+        private static int spheresDestroyed = 0;
+
         private int tankScore;
 
         public event Action OnTankScoreChanged;
+
+        public static int SpheresDestroyed 
+        {
+            get 
+            {
+                return spheresDestroyed;
+            }
+        }
 
         public int TankScore 
         {
@@ -24,11 +34,15 @@ namespace TankGame.Tank.Score
         {
             tankScore = 0;
 
+            SphereHealth.OnSphereDestroyed += RiseSpheresDestroyCount;
+
             SphereHealth.OnSphereDestroyed += AddScore;
         }
 
         private void OnDestroy()
         {
+            SphereHealth.OnSphereDestroyed -= RiseSpheresDestroyCount;
+
             SphereHealth.OnSphereDestroyed -= AddScore;
         }
 
@@ -37,6 +51,11 @@ namespace TankGame.Tank.Score
             tankScore += pointsPerObjectiveDestroyed;
 
             OnTankScoreChanged?.Invoke();
+        }
+
+        private void RiseSpheresDestroyCount() 
+        {
+            spheresDestroyed++;
         }
     }
 }
