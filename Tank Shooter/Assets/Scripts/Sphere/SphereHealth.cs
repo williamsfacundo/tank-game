@@ -38,7 +38,7 @@ public class SphereHealth : MonoBehaviour, IDamaged
     {
         activeSphereInstances--;
 
-        OnActiveSphereInstancesChanged.Invoke();
+        OnActiveSphereInstancesChanged?.Invoke();
 
         if (activeSphereInstances <= 0) 
         {
