@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 1810664910746893422}
   - component: {fileID: 1379036113899434791}
   - component: {fileID: 1902705181907500326}
-  - component: {fileID: 2764798758081426997}
+  - component: {fileID: 8619455084386814305}
   m_Layer: 5
   m_Name: Sphere Count Text
   m_TagString: Untagged
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2764798758081426997
+--- !u!114 &8619455084386814305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6438692169718402934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6226e725d7876104885a2f6cf5eeb2b8, type: 3}
+  m_Script: {fileID: 11500000, guid: febc7a53a5f57934b95554f6b869800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7985674912498974336
