@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +12,8 @@ namespace TankGame.UI
     public class SoundToggleUI : MonoBehaviour
     {
         private Toggle soundActiveStatusToggle;
+
+        public static event Action<bool> OnSoundStatusChanged;
 
         private void Awake()
         {
@@ -29,6 +33,8 @@ namespace TankGame.UI
                 soundActiveStatusToggle.isOn = true;
             }
 
+            OnSoundStatusChanged?.Invoke(!soundActiveStatusToggle.isOn);
+
             soundActiveStatusToggle.onValueChanged.AddListener(UpdateSoundStatusInPlayerPrefs);
         }
 
@@ -40,6 +46,8 @@ namespace TankGame.UI
         private void UpdateSoundStatusInPlayerPrefs(bool toggleValue) 
         {
             BoolValueStorageInPlayerPref.StoreBoolValue(toggleValue, AudioManager.SoundKeyName);
+
+            OnSoundStatusChanged?.Invoke(!soundActiveStatusToggle.isOn);
         }
     }
 }
