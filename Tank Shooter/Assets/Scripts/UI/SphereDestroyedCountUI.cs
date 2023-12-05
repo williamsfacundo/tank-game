@@ -17,11 +17,6 @@ namespace TankGame.UI
             sphereText = GetComponent<TextMeshProUGUI>();
 
             tankScoreBehaviour = GameObject.FindGameObjectWithTag("Player").GetComponent<TankScoreBehaviour>();
-        }
-
-        private void Start()
-        {
-            UpdateSphereText();
 
             tankScoreBehaviour.OnTankScoreChanged += UpdateSphereText;
         }
