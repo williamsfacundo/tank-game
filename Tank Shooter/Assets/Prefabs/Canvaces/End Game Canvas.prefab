@@ -358,8 +358,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 7139819804640565317}
   - component: {fileID: 7139819804640565316}
   m_Layer: 5
-  m_Name: Score points
+  m_Name: Value Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,8 +494,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 7139819804753725054}
   - component: {fileID: 7139819804753725055}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Spheres Destroyed Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 7139819804908286138}
   - component: {fileID: 7139819804908286137}
   m_Layer: 5
-  m_Name: Last Score Background
+  m_Name: Spheres Destroyed Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 7139819805146835070}
   - component: {fileID: 7139819805146835069}
   m_Layer: 5
-  m_Name: Score Name
+  m_Name: Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LAST SCORE
+  m_text: spheres destroyed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb2f4fa7ba1c7224da5867074ca27a63, type: 2}
   m_sharedMaterial: {fileID: 8775439295390646113, guid: cb2f4fa7ba1c7224da5867074ca27a63,
@@ -1108,7 +1108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7139819805206966412}
   m_Layer: 5
-  m_Name: Last Score
+  m_Name: Spheres Destroyed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1212,8 +1212,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1324,6 +1324,7 @@ GameObject:
   - component: {fileID: 7139819805708760837}
   - component: {fileID: 7139819805708760836}
   - component: {fileID: 5665444169238406569}
+  - component: {fileID: 5707752395009150523}
   m_Layer: 5
   m_Name: End Game Canvas
   m_TagString: Untagged
@@ -1430,6 +1431,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuButton: {fileID: 8098902830701064147}
+--- !u!114 &5707752395009150523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139819805708760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767c3fd5d32e49b48bb5acb0b8286b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spheresDestroyedText: {fileID: 7139819804640565316}
 --- !u!1 &7139819805732062304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,8 +1520,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
