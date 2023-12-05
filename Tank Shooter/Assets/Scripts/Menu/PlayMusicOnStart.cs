@@ -4,13 +4,13 @@ using TankGame.Sound;
 
 namespace TankGame.Menu 
 {
-    public class PlayMainMenuMusic : MonoBehaviour
+    public class PlayMusicOnStart : MonoBehaviour
     {
-        [SerializeField] private string menuMusicName;
+        [SerializeField] private string musicName;
 
         private void Start()
         {
-            AudioManager.Instance.SetMusic(menuMusicName);
+            AudioManager.Instance.SetMusic(musicName);
 
             AudioManager.Instance.PlayMusic();
         }
