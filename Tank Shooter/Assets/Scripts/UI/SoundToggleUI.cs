@@ -18,13 +18,13 @@ namespace TankGame.UI
 
         void Start()
         {
-            if (BoolValueStorageInPlayerPref.DoesValueExist(SoundManager.SoundKeyName))
+            if (BoolValueStorageInPlayerPref.DoesValueExist(AudioManager.SoundKeyName))
             {
-                soundActiveStatusToggle.isOn = BoolValueStorageInPlayerPref.RetrieveBoolValue(SoundManager.SoundKeyName);
+                soundActiveStatusToggle.isOn = BoolValueStorageInPlayerPref.RetrieveBoolValue(AudioManager.SoundKeyName);
             }
             else 
             {
-                BoolValueStorageInPlayerPref.StoreBoolValue(true, SoundManager.SoundKeyName);
+                BoolValueStorageInPlayerPref.StoreBoolValue(true, AudioManager.SoundKeyName);
 
                 soundActiveStatusToggle.isOn = true;
             }
@@ -39,7 +39,7 @@ namespace TankGame.UI
 
         private void UpdateSoundStatusInPlayerPrefs(bool toggleValue) 
         {
-            BoolValueStorageInPlayerPref.StoreBoolValue(toggleValue, SoundManager.SoundKeyName);
+            BoolValueStorageInPlayerPref.StoreBoolValue(toggleValue, AudioManager.SoundKeyName);
         }
     }
 }
