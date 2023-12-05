@@ -49,7 +49,7 @@ namespace TankGame.Sound
             else
             {
                 Debug.LogError("No sfx audio source was assigned!");
-            }
+            }                        
         }
 
         public void SetMusic(string musicName) 
@@ -126,6 +126,16 @@ namespace TankGame.Sound
             {
                 sfxAudioSource.Pause();
             }
+        }
+
+        public void SetMusicMuteStatus(bool isMute) 
+        {
+            musicAudioSource.mute = isMute;
+        }
+
+        public void SetSfxsMuteStatus(bool isMute) 
+        {
+            sfxAudioSource.mute = isMute;
         }
     }
 }
