@@ -66,7 +66,7 @@ namespace TankGame.Sound
             }
         }
 
-        public void PlayMusic(string musicName) 
+        public void PlayMusic() 
         {
             if (musicAudioSource.clip != null) 
             {
@@ -104,7 +104,7 @@ namespace TankGame.Sound
             }
         }
 
-        public void PlaySfx(string musicName)
+        public void PlaySfx()
         {
             if (sfxAudioSource.clip != null)
             {
