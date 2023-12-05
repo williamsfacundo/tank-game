@@ -12,7 +12,7 @@ namespace TankGame.Tank.Score
 
         private static int spheresDestroyed = 0;
 
-        private int tankScore;
+        private static int tankScore = 0;
 
         public static int SpheresDestroyed 
         {
@@ -22,7 +22,7 @@ namespace TankGame.Tank.Score
             }
         }
 
-        public int TankScore 
+        public static int TankScore 
         {
             get 
             {

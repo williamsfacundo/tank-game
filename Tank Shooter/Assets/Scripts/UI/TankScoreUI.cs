@@ -34,7 +34,7 @@ namespace TankGame.UI
 
         private void UpdateTankScoreText()
         {
-            tankScoreText.text = tankScoreBehaviour.TankScore.ToString();
+            tankScoreText.text = TankScoreBehaviour.TankScore.ToString();
         }
     }
 }
