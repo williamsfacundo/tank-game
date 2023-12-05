@@ -1,0 +1,20 @@
+Developer:
+- Williams Facundo
+
+Web Assets:
+
+Menu UI and Fonts:
+- Kenney
+
+web: https://www.kenney.nl/
+
+Assets From Unity Asset Store:
+
+Controls UI:
+- JohnFarmer
+
+Tank Model:
+- Vladimir Chertoriiskii
+
+Projectile VFX:
+- Vefects
