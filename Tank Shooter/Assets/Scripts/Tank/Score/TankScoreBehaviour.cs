@@ -36,6 +36,8 @@ namespace TankGame.Tank.Score
 
             spheresDestroyed = 0;
 
+            OnTankScoreChanged.Invoke();
+
             SphereHealth.OnSphereDestroyed += RiseSpheresDestroyCount;
 
             SphereHealth.OnSphereDestroyed += AddScore;
