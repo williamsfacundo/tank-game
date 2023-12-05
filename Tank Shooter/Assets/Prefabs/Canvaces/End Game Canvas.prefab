@@ -892,7 +892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NAME
+  m_text: SCORE 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb2f4fa7ba1c7224da5867074ca27a63, type: 2}
   m_sharedMaterial: {fileID: 8775439295390646113, guid: cb2f4fa7ba1c7224da5867074ca27a63,
@@ -1325,6 +1325,8 @@ GameObject:
   - component: {fileID: 7139819805708760836}
   - component: {fileID: 5665444169238406569}
   - component: {fileID: 5707752395009150523}
+  - component: {fileID: 7814209356473514224}
+  - component: {fileID: 7545907501282746426}
   m_Layer: 5
   m_Name: End Game Canvas
   m_TagString: Untagged
@@ -1444,6 +1446,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spheresDestroyedText: {fileID: 7139819804640565316}
+--- !u!114 &7814209356473514224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139819805708760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dd31acf1b6ffc488f78443c8e6612d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7545907501282746426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139819805708760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac80d12eac2be7428609c831d6e8e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreTexts:
+  - {fileID: 7139819804576293224}
+  - {fileID: 7139819805216941048}
+  - {fileID: 7139819805732062306}
 --- !u!1 &7139819805732062304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NAME
+  m_text: SCORE 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb2f4fa7ba1c7224da5867074ca27a63, type: 2}
   m_sharedMaterial: {fileID: 8775439295390646113, guid: cb2f4fa7ba1c7224da5867074ca27a63,
@@ -1782,7 +1812,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NAME
+  m_text: 'SCORE 3
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb2f4fa7ba1c7224da5867074ca27a63, type: 2}
   m_sharedMaterial: {fileID: 8775439295390646113, guid: cb2f4fa7ba1c7224da5867074ca27a63,
