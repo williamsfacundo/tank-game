@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6484189388117799579}
   - component: {fileID: 5696786914307872915}
   - component: {fileID: 6808191192008720191}
+  - component: {fileID: 9137027466036869843}
   m_Layer: 0
   m_Name: Gameplay Manager
   m_TagString: GameController
@@ -74,3 +75,15 @@ MonoBehaviour:
   pauseGameKeys: 700000001b000000
   pauseMenuUI: {fileID: 0}
   gameplayUI: {fileID: 0}
+--- !u!114 &9137027466036869843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484189388117799577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a04dea601054d4e983c16d476b2216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
