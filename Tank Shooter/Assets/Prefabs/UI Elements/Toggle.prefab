@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 830057620803025072}
   - component: {fileID: 3579494262797140965}
   - component: {fileID: 8427610497307195617}
+  - component: {fileID: 2170043379392946483}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -177,6 +178,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441a515b5f827a44c85d5dd8bacbf9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2170043379392946483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2221091487661814133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85e839d17e9b52488928b35ed756d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTouchedSfxName: Rollover
+  buttonClickedElementSfxName: Click
 --- !u!1 &2227369402364440538
 GameObject:
   m_ObjectHideFlags: 0
