@@ -1327,6 +1327,7 @@ GameObject:
   - component: {fileID: 5707752395009150523}
   - component: {fileID: 7814209356473514224}
   - component: {fileID: 7545907501282746426}
+  - component: {fileID: 4860497161699896460}
   m_Layer: 5
   m_Name: End Game Canvas
   m_TagString: Untagged
@@ -1474,6 +1475,19 @@ MonoBehaviour:
   - {fileID: 7139819804576293224}
   - {fileID: 7139819805216941048}
   - {fileID: 7139819805732062306}
+--- !u!114 &4860497161699896460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7139819805708760843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017512f2eac2b9f4caf29d1b7ac0e5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicName: EndGameMusic
 --- !u!1 &7139819805732062304
 GameObject:
   m_ObjectHideFlags: 0
