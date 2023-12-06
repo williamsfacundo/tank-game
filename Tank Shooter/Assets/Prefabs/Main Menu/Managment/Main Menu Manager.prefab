@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017512f2eac2b9f4caf29d1b7ac0e5c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusicName: MainMenuMusic
+  musicName: MainMenuMusic
 --- !u!114 &7786167494334669424
 MonoBehaviour:
   m_ObjectHideFlags: 0
