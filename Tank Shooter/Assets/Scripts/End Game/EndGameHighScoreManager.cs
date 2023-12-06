@@ -15,13 +15,15 @@ namespace TankGame.EndGame
     {
         private const string fileName = "/highScoresTable.dat";
 
+        public event Action OnHighScoreChanged;
+        
+        private List<int> highScoresList;
+        
+        private HighScoresTable highScoresTableStruct;
+        
         private string filePath;
 
-        private HighScoresTable highScoresTableStruct;
-
-        private List<int> highScoresList;
-
-        public event Action OnHighScoreChanged;
+        private bool newHighScoreAchieved;
 
         public int HighScore1 
         {
@@ -47,6 +49,14 @@ namespace TankGame.EndGame
             }
         }
 
+        public bool NewHighScoreAchieved 
+        {
+            get
+            {
+                return newHighScoreAchieved;
+            }
+        }
+
         void Start()
         {
             filePath = Application.persistentDataPath + fileName;            
@@ -59,9 +69,11 @@ namespace TankGame.EndGame
             highScoresList.Add(highScoresTableStruct.highScore2);
             highScoresList.Add(highScoresTableStruct.highScore3);
 
+            newHighScoreAchieved = false;
+
             OnHighScoreChanged?.Invoke();
 
-            bool isNewGameplayScore = TryToAddScoreInTable(TankScoreBehaviour.TankScore);
+            TryToAddScoreInTable(TankScoreBehaviour.TankScore);
         }
 
         private HighScoresTable GetHighScoreTableFromFile() 
@@ -80,7 +92,7 @@ namespace TankGame.EndGame
             }
         }
 
-        private bool TryToAddScoreInTable(int score)
+        private void TryToAddScoreInTable(int score)
         {
             highScoresList.SortDescending();
 
@@ -98,13 +110,11 @@ namespace TankGame.EndGame
 
                 BinaryFilesManager.Save(highScoresTableStruct, filePath);
 
+                newHighScoreAchieved = true;
+
                 OnHighScoreChanged?.Invoke();
 
-                return true;
-            }
-            else 
-            {
-                return false;
+                newHighScoreAchieved = false;
             }
         }
     }
