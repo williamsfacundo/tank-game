@@ -183,7 +183,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 59ea27cd8f9ccc3439c3137810da299e, type: 3}
   - soundName: EndGameMusic
     clip: {fileID: 8300000, guid: c652a3bd651c4854cb5461f60e52cbf5, type: 3}
-  sfxSounds: []
+  sfxSounds:
+  - soundName: Click
+    clip: {fileID: 8300000, guid: 847ba20b46e4e0a468b043255923bb34, type: 3}
+  - soundName: Rollover
+    clip: {fileID: 8300000, guid: e4ebfcfbed2d3a94c9ceae9d63f6185b, type: 3}
+  - soundName: Switch
+    clip: {fileID: 8300000, guid: ce7a060c10b67c549a575e209b49f6f6, type: 3}
   musicAudioSource: {fileID: 1345660161909289609}
   sfxAudioSource: {fileID: 5790808869580159242}
 --- !u!1 &6206686925853224248
