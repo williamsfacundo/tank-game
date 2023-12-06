@@ -22,9 +22,9 @@ Special Thanks: [Image Campus](https://www.imagecampus.edu.ar/)
 
 You can also find my game in [itch.io](https://williamsdev.itch.io/tank-game)
 
-![Image Campus](/Images/Image Campus.jpg)
+![Image Campus](/Images/ImageCampus.jpg)
 
-![Main Menu](/Images/Main Menu.jpg)
+![Main Menu](/Images/MainMenu.jpg)
 
 ![Pause](/Images/Pause.jpg)
 
