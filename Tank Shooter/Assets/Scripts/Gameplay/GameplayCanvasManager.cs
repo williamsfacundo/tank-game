@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ namespace TankGame.Gameplay
         [SerializeField] private GameObject pauseMenuUI;
 
         [SerializeField] private GameObject gameplayUI;
+
+        public event Action OnPauseActivated;
+
+        public event Action OnGameplayActivated;
 
         private void Awake()
         {
@@ -68,7 +73,17 @@ namespace TankGame.Gameplay
         {
             pauseMenuUI.SetActive(!pauseMenuUI.activeSelf);
 
+            if (pauseMenuUI.activeSelf) 
+            {
+                OnPauseActivated?.Invoke();
+            }
+
             gameplayUI.SetActive(!gameplayUI.activeSelf);
+
+            if (gameplayUI.activeSelf) 
+            {
+                OnGameplayActivated?.Invoke();
+            }
         }
 
         private void StopResumeGameplayTime() 
