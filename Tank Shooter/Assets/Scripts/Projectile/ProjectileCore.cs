@@ -14,11 +14,15 @@ namespace TankGame.Projectile
 
         private Rigidbody thisRigidBody;
 
-        private Timer lifeTimeTimer;
+        private ParticleSystem[] particles;
+
+        private Timer lifeTimeTimer;        
 
         private void Awake()
         {
-            thisRigidBody = GetComponent<Rigidbody>();            
+            thisRigidBody = GetComponent<Rigidbody>();
+
+            particles = GetComponentsInChildren<ParticleSystem>();
 
             lifeTimeTimer = new Timer(projectileLifeTime, true, false);
         }
@@ -27,11 +31,35 @@ namespace TankGame.Projectile
         {
             lifeTimeTimer.OnTimerEnds += Deactivate;
 
+            for (short i = 0; i < particles.Length; i++)
+            {
+                particles[i].Clear();
+
+                particles[i].Play();
+            }
+        }
+
+        private void OnEnable()
+        {
+            for (short i = 0; i < particles.Length; i++)
+            {
+                particles[i].Clear();
+
+                particles[i].Play();
+            }
+        }
+
+        private void OnDisable()
+        {
+            for (short i = 0; i < particles.Length; i++)
+            {
+                particles[i].Stop();                
+            }
         }
 
         private void Update()
         {
-            lifeTimeTimer.UpdateTimer();
+            lifeTimeTimer.UpdateTimer();            
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -53,16 +81,16 @@ namespace TankGame.Projectile
 
         public void Activate(Transform launcherTransform) 
         {
+            thisRigidBody.transform.position = launcherTransform.position;            
+
+            thisRigidBody.velocity = launcherTransform.forward * projectileVelocity;            
+
             gameObject.SetActive(true);
-
-            thisRigidBody.MovePosition(launcherTransform.position);
-
-            thisRigidBody.velocity = launcherTransform.forward * projectileVelocity;
 
             lifeTimeTimer.ResetTime();
         }
 
-        private void Deactivate() 
+        private void Deactivate()
         {
             gameObject.SetActive(false);
         }
