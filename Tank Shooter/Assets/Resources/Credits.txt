@@ -11,13 +11,13 @@ Web: https://www.kenney.nl/
 Assets From Unity Asset Store:
 
 Controls UI:
-- JohnFarmer
+- JohnFarmer (Keyboard Keys & Mouse Sprites)
 
 Tank Model:
-- Vladimir Chertoriiskii
+- Vladimir Chertoriiskii (Tank T-90)
 
 Projectile VFX:
-- Vefects
+- Vefects (Free Fire VFX - URP)
 
 Music
-- Theo Prior Music
+- Theo Prior Music (Sc-Fi Music)
