@@ -3,10 +3,10 @@ Developer:
 
 Web Assets:
 
-Menu UI and Fonts:
+Menu UI, Fonts and UI SFX:
 - Kenney
 
-web: https://www.kenney.nl/
+Web: https://www.kenney.nl/
 
 Assets From Unity Asset Store:
 
@@ -18,3 +18,6 @@ Tank Model:
 
 Projectile VFX:
 - Vefects
+
+Music
+- Theo Prior Music
