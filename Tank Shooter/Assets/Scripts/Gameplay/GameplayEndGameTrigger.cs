@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using TankGame.Scenes;
+using TankGame.Tank.Collisions;
 
 namespace TankGame.Gameplay 
 {
@@ -19,6 +20,8 @@ namespace TankGame.Gameplay
             SphereHealth.OnAllSpheresDisabled += TriggerEndGame;
 
             gameplayTimer.endGameTimer.OnTimerEnds += TriggerEndGame;
+
+            TankCollisionWithEnemy.OnCollisionWithEnemy += TriggerEndGame;
         }
 
         private void OnDestroy()
@@ -26,6 +29,8 @@ namespace TankGame.Gameplay
             SphereHealth.OnAllSpheresDisabled -= TriggerEndGame;
 
             gameplayTimer.endGameTimer.OnTimerEnds -= TriggerEndGame;
+
+            TankCollisionWithEnemy.OnCollisionWithEnemy -= TriggerEndGame;
         }
 
         private void TriggerEndGame() 

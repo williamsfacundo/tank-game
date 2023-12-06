@@ -1709,7 +1709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3516137608261551286}
   - component: {fileID: 5738622443642618723}
-  - component: {fileID: 1047767201912297591}
+  - component: {fileID: 7084204154797832372}
   - component: {fileID: 7724278984225246076}
   - component: {fileID: 8846774836739925751}
   - component: {fileID: 378640542535684462}
@@ -1717,6 +1717,7 @@ GameObject:
   - component: {fileID: 8773488031490618198}
   - component: {fileID: 7181317782414943605}
   - component: {fileID: 6111536641089437318}
+  - component: {fileID: 938002378114597278}
   m_Layer: 0
   m_Name: Combat Tank
   m_TagString: Player
@@ -1760,8 +1761,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 3
---- !u!65 &1047767201912297591
-BoxCollider:
+--- !u!136 &7084204154797832372
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1770,9 +1771,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.8, y: 1.9, z: 7.35}
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Radius: 2
+  m_Height: 7.2
+  m_Direction: 2
+  m_Center: {x: 0, y: 1.69, z: 0}
 --- !u!114 &7724278984225246076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,6 +1872,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsPerObjectiveDestroyed: 1500
+--- !u!114 &938002378114597278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116287024062540783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85634c822675a3e4896328ff4fa1debf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: Sphere
 --- !u!1 &2151731788058089319
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ namespace TankGame.UI
 
         [SerializeField] private TextMeshProUGUI[] highScoreTexts;
 
+        [SerializeField] private GameObject highScoreAchievedNotificationUI;
+
         bool areEnoughTexts;
 
         private void Awake()
@@ -35,6 +37,11 @@ namespace TankGame.UI
             {
                 areEnoughTexts = true;
             }
+
+            if (highScoreAchievedNotificationUI == null) 
+            {
+                Debug.LogError("No high score achieved notification UI gameobject was assigned!");
+            }
         }
 
         private void OnDestroy()
@@ -51,6 +58,11 @@ namespace TankGame.UI
                 highScoreTexts[1].text = highScoreManager.HighScore2.ToString();
 
                 highScoreTexts[2].text = highScoreManager.HighScore3.ToString();
+            }
+
+            if (highScoreAchievedNotificationUI != null) 
+            {
+                highScoreAchievedNotificationUI.SetActive(highScoreManager.NewHighScoreAchieved);
             }
         }
     }
