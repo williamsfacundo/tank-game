@@ -1717,6 +1717,7 @@ GameObject:
   - component: {fileID: 8773488031490618198}
   - component: {fileID: 7181317782414943605}
   - component: {fileID: 6111536641089437318}
+  - component: {fileID: 938002378114597278}
   m_Layer: 0
   m_Name: Combat Tank
   m_TagString: Player
@@ -1871,6 +1872,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsPerObjectiveDestroyed: 1500
+--- !u!114 &938002378114597278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116287024062540783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85634c822675a3e4896328ff4fa1debf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: Sphere
 --- !u!1 &2151731788058089319
 GameObject:
   m_ObjectHideFlags: 0
